@@ -1,1 +1,5 @@
 v/*
+output/*
+content/*
+assets/images*
+*.pyc
