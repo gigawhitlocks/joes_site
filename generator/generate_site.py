@@ -4,8 +4,8 @@ from boto.s3.connection import S3Connection
 from boto.s3.key import Key
 
 from jinja2 import Environment, PackageLoader
+import markdown
 import argparse
-import magic
 import os
 
 env = Environment(loader=PackageLoader('generate_site', '../templates'))
@@ -15,6 +15,16 @@ JINJA_CONSTANTS = {
     'SITE_URL': 'http://josephhader.com',
     'NAV_ELEMENTS': ['about', 'design', 'video', 'resume', 'contact']
 }
+
+def get_post(post_name):
+    try:
+        return markdown.markdown(
+            markdown.codecs.open(PRODROOT+"content/"+post_name+".md",
+                                 mode="r",
+                                 encoding="utf-8").read())
+    except IOError:
+        return "No post content found"
+
 
 def render_template(template, **kwargs):
     """foo
@@ -30,6 +40,8 @@ def upload_assets(bucket):
                                          PRODROOT+"assets/"))
                              for f in fn]]
     for asset in assets:
+        if asset.startswith('~') or asset.startswith('#'):
+            continue
         key = bucket.new_key(asset)
         key.set_contents_from_file(open(PRODROOT+"assets/"+asset, 'rb'), policy='public-read')
 
@@ -50,13 +62,18 @@ def main():
     parser = argparse.ArgumentParser(description='Process a template')
     parser.add_argument('template',
                         help='The name of the template, including .html')
-    parser.add_argument('--upload', help='upload to s3?', dest='upload', default=False, action='store_true')
+    parser.add_argument('--upload', help='upload to s3?', dest='upload',
+                        default=False, action='store_true')
     args = parser.parse_args()
-    rendered_page = str(render_template(args.template, **JINJA_CONSTANTS))
+    rendered_page = str(render_template(args.template,
+                                        post_content=get_post(
+                                            args.template.split(".")[0]),
+                                        **JINJA_CONSTANTS))
     if args.upload:
         upload_site(args.template, rendered_page)
     else:
         print(rendered_page)
+
 
 if __name__ == "__main__":
     main()

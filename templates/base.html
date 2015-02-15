@@ -3,42 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Joe Hader</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css" />
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/menus-min.css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" type="text/css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css" type="text/css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/menus-min.css" type="text/css" />
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css" type="text/css" />
-    <link rel="stylesheet" href="css/side-menu.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
 
   </head>
   <body>
+    <div id="nav" class="pure-g pure-g-u-1">
+      <ul>
+	{% for element in NAV_ELEMENTS %}
+	<li><a href="{{ SITE_URL }}/{{element}}.html">
+	  <img src="{{ SITE_URL }}/images/nav/{{element|upper}}.png"></a></li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div id="layout pure-g">
+      <div class="pure-g">
+	<div class="pure-u-1" style="text-align: center">
+	  <a href="{{ SITE_URL }}">
+	    <img src="{{SITE_URL}}/images/LOGO.png" /></a>
+	</div>
+      </div>
 
-    <div id="layout">
-      <!-- Menu toggle -->
-      <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-      </a>
-
-      <div id="menu">
-        <div class="pure-menu pure-menu-open">
-          <a class="pure-menu-heading" href="{{ SITE_URL }}">
-	    <div id="logo-buffer"></div>
-	  </a>
-          <ul>
-	    {% for element in NAV_ELEMENTS %}
-            <li><a href="{{ SITE_URL }}/{{element}}.html">
-	      <img src="{{ SITE_URL }}/images/nav/{{element|upper}}.png"></a></li>
-	    {% endfor %}
-          </ul>
-        </div>
-      </div> 
-      <div id="main">
-
-        <div class="content">
-	  {% block content %}
-	  {% endblock %}
-        </div>
+      <div id="main" style="text-align:center">
+	<div class="content" style="margin-left: auto; margin-right: auto;">
+	  <div id="offset-content-padding" >
+	    {% block content %}
+	    {% endblock %}
+	  </div>
+	</div>
       </div>
     </div>
   </body>
