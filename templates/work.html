@@ -15,7 +15,7 @@
   </div>
   <script type="text/javascript">
    $("#{{post.name}}-link").click(function(){
-       $.get("{{SITE_URL}}/work/{{post.name}}.html", function( data ){
+       $.get("{{SITE_URL}}/{{post.filename}}.html", function( data ){
 	   $("#jumbotron").html(data);
        });
    });

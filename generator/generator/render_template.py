@@ -42,6 +42,7 @@ def _translate_posts(pagemap):
         try:
             if pagemap.get('expanded', None):
                 filename = pagemap.get('expanded').split(".md")[0]
+                pagemap['filename'] = filename
                 with open(TESTROOT+
                           "output/"+filename+'.html', 'w') as outfile:
                     rendered_page = get_post(filename).encode('utf-8')
