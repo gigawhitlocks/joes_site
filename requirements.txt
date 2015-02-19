@@ -1,0 +1,14 @@
+beautifulsoup4==4.3.2
+boto==2.36.0
+filemagic==1.6
+ipython==2.4.1
+Jinja2==2.7.3
+libmagic==1.0
+Markdown==2.5.2
+MarkupSafe==0.23
+pyembed==1.1.2
+pyembed-markdown==1.1.0
+python-markdown-oembed==0.1.4
+python-oembed==0.2.1
+PyYAML==3.11
+requests==2.5.1
