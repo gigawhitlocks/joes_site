@@ -25,21 +25,21 @@ This is the parent `<div>` that contains the menu and the content area.
 }
     #layout.active {
         position: relative;
-        left: 150px;
+        left: 100px;
     }
         #layout.active #menu {
-            left: 150px;
-            width: 150px;
+            left: 100px;
+            width: 100px;
         }
 
         #layout.active .menu-link {
-            left: 150px;
+            left: 100px;
         }
 /*
 The content `<div>` is where all your content goes.
 */
 .content {
-    margin: 0 auto;
+    margin-top: 0px;
     padding: 0 2em;
     max-width: 800px;
     margin-bottom: 50px;
@@ -80,17 +80,22 @@ appears on the left side of the page.
 
 #menu {
     background-repeat: no-repeat;
-    background-image: url(/images/nav/VerticalNavTexture_Logo.png);
-    margin-left: -150px; /* "#menu" width */
-    width: 150px;
+    background-image: url(/images/nav/NavBackground.png);
+    margin-left: -100px; /* "#menu" width */
+    width: 100px;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100px;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+    #menu img {
+	max-width: 100%;
+	height: auto;
+    }
     /*
     All anchors inside the menu should be styled like this.
     */
@@ -169,7 +174,7 @@ small screens.
 }
 
     .menu-link:hover {
-        background: #000;
+        background: #383742;
     }
     .menu-link:focus {
 	background: transparent;
@@ -213,11 +218,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 
     #layout {
-        padding-left: 150px; /* left col width "#menu" */
+        padding-left: 100px; /* left col width "#menu" */
         left: 0;
     }
     #menu {
-        left: 150px;
+        left: 100px;
     }
 
     .menu-link {

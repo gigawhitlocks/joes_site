@@ -1,4 +1,14 @@
 {% extends "base.html" %}
+{% set active_page = "about" %}
 {% block content %}
-{{ post_content }}
+<div class="row center-block">
+  <div class="col-md-9 col-centered">
+    <div class="col-md-3" style="padding-bottom:2em">
+      <img src="{{SITE_URL}}/images/Portrait.jpg" style="margin-left:auto; margin-right:auto; text-align:justified" class="img-responsive" />
+    </div>
+    <div class="col-md-6">
+      {{ post_content }}
+    </div>
+  </div>
+</div>
 {% endblock %}

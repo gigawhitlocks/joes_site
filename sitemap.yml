@@ -1,0 +1,12 @@
+work:
+  jumbotron: work/jumbotron.md
+  feed:
+  - name: under_armor
+    thumb: images/under_armor.png
+    expanded: work/under_armor.md
+  - name: moogfest
+    thumb: images/Moog720Thumb.jpg
+    expanded: work/moogfest.md
+
+about: about.md
+contact: contact.md

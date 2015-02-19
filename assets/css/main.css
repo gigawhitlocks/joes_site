@@ -1,12 +1,25 @@
-body {
-    background-color: #383742;
+html, body {
+    /*background-color: #383742;*/
+    background-color: #2a2935;
     color: #8A8A8B;
     font-family: helvetica;
+    height: 100%;
 }
 
 .content {
     margin-left: 5px;
+    margin-bottom: 50px;
     padding-left: 5px;
+    margin-top: 0px;
+    padding: 0 2em;
+    max-width: 960px;
+    line-height: 1.6em;
+}
+
+.jumbotron {
+    padding: 1em;
+    background-color: #2a2935;
+    margin-bottom: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,4 +34,77 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
     height: 150px;
     width: auto;
+}
+
+#offset-content-padding {
+    background: #2a2935;
+    text-align: left;
+    padding: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    z-index:-1000;
+}
+
+#layout {
+    padding-left: 2em;
+    padding-right: 2em;
+    max-width: 1024px;
+}
+
+.nav {
+    background-color: #383742; 
+    @grid-float-breakpoint: @screen-md-min;
+    position: relative;
+    top: -10px;
+}
+
+.thumbnail {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2a2935;
+  border: none;
+  padding: 1em;
+  max-width: 100%;
+  height: auto;
+}
+
+.thumbnail>*>img {
+    display: @display;
+    max-width: 100%; 
+    height: auto;
+}
+
+.nav-pills>li>a:hover,
+.nav-pills>li>a:visited,
+.nav-pills>li>a:active{
+    background-color: #2a2935;
+}
+
+
+.logo {
+    background-color: #383742;
+}
+
+#footer {
+    position: relative;
+    margin-top: -70px; /* negative value of footer height */
+    height: 70px;
+    clear:both;
+    padding-top:20px;
+    background-color: #1d1d25;
+    color: #2a2935;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    margin-bottom: 70px;
+}
+.col_centered{
+    float: none;
+    margin: 0 auto;
 }
