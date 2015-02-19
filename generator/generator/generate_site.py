@@ -18,9 +18,9 @@ def main():
     if not 'sitemap.yml' in os.listdir('.'):
         raise Exception('SANITY CHECK! Aborting due to execution in unknown directory!')
 
-    os.system("ln -s {}/ouput/work.html {}/output/index.html".format(cwd, cwd))
     os.system("rm -rf output/")
     os.system("mkdir -p output/work")
+    os.system("ln -s {}/ouput/work.html {}/output/index.html".format(cwd, cwd))
     for template in os.listdir('templates'):
         render_template.render_template(template, args.upload, args.project_dir)
 
@@ -33,6 +33,7 @@ def main():
         print("Uploading assets..")
         render_template.upload_assets(bucket)
 
+    os.chdir('output')
     print("Starting preview server..")
     import SimpleHTTPServer
     import SocketServer
