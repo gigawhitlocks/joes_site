@@ -34,10 +34,8 @@ def get_post(post_name):
 def _translate_posts(pagemap):
     try:
         if pagemap.endswith(".md"):
-            print "return get_post line 37 pagemap {}".format(pagemap)
             return get_post(pagemap.split(".md")[0])
         else:
-            print "return pagemap line 39 {}".format(pagemap)
             return pagemap
 
     except AttributeError:
@@ -50,7 +48,6 @@ def _translate_posts(pagemap):
                     outfile.write(rendered_page)
                     global extra_templates
                     extra_templates['{}.html'.format(filename)] = rendered_page
-                print "return pagemap line 53 {}".format(pagemap)
                 return pagemap
             return { element: _translate_posts(pagemap[element]) for element in pagemap }
         except AttributeError:
@@ -62,7 +59,6 @@ def _translate_posts(pagemap):
 def get_posts(page):
     sitemap = yaml.load_all(open(TESTROOT+"sitemap.yml")).next()
     new_sitemap = _translate_posts(sitemap[page])
-    import pprint; pprint.pprint(new_sitemap)
     return _translate_posts(sitemap[page])
 
 def _render_template(template, **kwargs):
@@ -98,10 +94,9 @@ def render_template(template_name, upload_bool, testroot):
     """
     global TESTROOT
     TESTROOT = testroot + "/"
-    print("Rendering {}".format(template_name))
     JINJA_CONSTANTS['TEMPLATE_URL'] = template_name
     JINJA_CONSTANTS['SITE_URL'] = 'http://josephhader.com' if upload_bool\
-                                  else 'http://zuul.io:8000'
+                                  else 'http://localhost:8000'
     if template_name != "base.html":
         post_content = get_posts(template_name.split(".")[0])
     else:
