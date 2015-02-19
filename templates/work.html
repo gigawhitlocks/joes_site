@@ -10,11 +10,11 @@
 <div class="row center-block">
   {% for post in post_content.feed %}
   <div class="col-md-6 thumbnail img-responsive">
-    <a href="#nav" id="{{post.name}}-link">
-      <img src="{{SITE_URL}}/{{post.thumb}}"/></a>
+    <a href="#nav" id="{{post.filename}}-link">
+      <img alt="{{post.name}}"src="{{SITE_URL}}/{{post.thumb}}"/></a>
   </div>
   <script type="text/javascript">
-   $("#{{post.name}}-link").click(function(){
+   $("#{{post.filename}}-link").click(function(){
        $.get("{{SITE_URL}}/{{post.filename}}.html", function( data ){
 	   $("#jumbotron").html(data);
        });
