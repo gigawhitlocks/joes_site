@@ -17,7 +17,10 @@ html, body {
 }
 
 .jumbotron {
-    padding: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
     background-color: #2a2935;
     margin-bottom: 0px;
 }
@@ -77,9 +80,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-pills>li>a:hover,
 .nav-pills>li>a:visited,
-.nav-pills>li>a:active{
+.nav-pills>li>a:active, .active{
     background-color: #2a2935;
 }
+
 
 
 .logo {
@@ -104,7 +108,33 @@ h1, h2, h3, h4, h5, h6 {
     overflow: auto;
     margin-bottom: 70px;
 }
-.col_centered{
+.col-centered{
     float: none;
     margin: 0 auto;
+}
+
+#contact {
+    height: 346px;
+    width: 300px;
+    background-image: url(/images/HexagonWatermark.png);
+    background-color: #2a2935;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 0;
+}
+
+#contact>*>img {
+    background: none;
+}
+#lunch-wrapper {
+    height: 346px;
+    padding: 0;
+    position: relative;
+    top: 87px;
+}
+
+
+#banner {
+    margin-left: auto;
+    margin-right: auto;
 }

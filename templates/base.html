@@ -14,7 +14,7 @@
       <div class="container-fluid clear-top logo">
 	<div class="row" style="text-align: center; padding: 10px;">
 	  <a href="{{SITE_URL}}">
-	    <img src="{{SITE_URL}}/images/LOGO.png" />
+	    <img src="{{SITE_URL}}/images/LOGO.png" class="img-responsive" id="banner" />
 	  </a>
 	</div>
       </div>
@@ -22,7 +22,7 @@
 	<a id="nav"></a>
 	{% for element in NAV_ELEMENTS %}
 	<li role="presentation"><a href="{{ SITE_URL }}/{{element}}.html"
-				   {% if SITE_URL == element.html %} class='active' {% endif %}>
+				   {% if TEMPLATE_URL == element %} class='active' {% endif %}>
 	  <img src="{{ SITE_URL }}/images/nav/{{element|upper}}.png"></a></li>
 	{% endfor %}
       </ul>

@@ -10,6 +10,7 @@ import markdown
 from pyembed.markdown import PyEmbedMarkdown
 import argparse
 import os
+import uuid
 import yaml
 
 TESTROOT = None
@@ -42,6 +43,7 @@ def _translate_posts(pagemap):
         try:
             if pagemap.get('expanded', None):
                 filename = pagemap.get('expanded').split(".md")[0]
+                pagemap['id'] = uuid.uuid4().hex
                 pagemap['filename'] = filename
                 with open(TESTROOT+
                           "output/"+filename+'.html', 'w') as outfile:
@@ -59,7 +61,6 @@ def _translate_posts(pagemap):
 
 def get_posts(page):
     sitemap = yaml.load_all(open(TESTROOT+"sitemap.yml")).next()
-    new_sitemap = _translate_posts(sitemap[page])
     return _translate_posts(sitemap[page])
 
 def _render_template(template, **kwargs):
@@ -95,9 +96,9 @@ def render_template(template_name, upload_bool, testroot):
     """
     global TESTROOT
     TESTROOT = testroot + "/"
-    JINJA_CONSTANTS['TEMPLATE_URL'] = template_name
+    JINJA_CONSTANTS['TEMPLATE_URL'] = template_name.split('.html')[0]
     JINJA_CONSTANTS['SITE_URL'] = 'http://josephhader.com' if upload_bool\
-                                  else 'http://localhost:8000'
+                                  else 'http://zuul.io:8000'
     if template_name != "base.html":
         post_content = get_posts(template_name.split(".")[0])
     else:

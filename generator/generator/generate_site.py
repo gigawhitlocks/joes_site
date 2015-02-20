@@ -42,7 +42,11 @@ def main():
     httpd = SocketServer.TCPServer(("", PORT), SimpleHTTPHandler)
 
     print "Serving at http://localhost:{}".format(PORT)
-    httpd.serve_forever()
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        httpd.shutdown()
+        print "Thank you for flying Whitlock Airlines"
 
 
 if __name__ == "__main__":

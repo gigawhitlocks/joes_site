@@ -2,12 +2,15 @@
 {% set active_page = "about" %}
 {% block content %}
 <div class="row center-block">
-  <div class="col-md-9 col-centered">
-    <div class="col-md-3" style="padding-bottom:2em">
-      <img src="{{SITE_URL}}/images/Portrait.jpg" style="margin-left:auto; margin-right:auto; text-align:justified" class="img-responsive" />
-    </div>
-    <div class="col-md-6">
-      {{ post_content }}
+  <div class="col-centered">
+    <div class="col-sm-10">
+	<div class="col-sm-4 col-sm-offset-2" style="padding: 0 2em 2em 0; text-align:center">
+	  <img src="{{SITE_URL}}/images/Portrait.jpg" />
+	</div>
+	<div class="col-sm-6 clearfix" style="text-align:justified">
+	  {{ post_content }}
+	</div>
+	<div class="clearfix visible-sm-block"></div>
     </div>
   </div>
 </div>
