@@ -18,7 +18,7 @@ extra_templates = {}
 
 JINJA_CONSTANTS = {
     'SITE_URL': None,
-    'NAV_ELEMENTS': ['about', 'work', 'contact']
+    'NAV_ELEMENTS': ['work', 'about', 'contact']
 }
 def get_post(post_name):
     try:
@@ -98,7 +98,7 @@ def render_template(template_name, upload_bool, testroot):
     TESTROOT = testroot + "/"
     JINJA_CONSTANTS['TEMPLATE_URL'] = template_name.split('.html')[0]
     JINJA_CONSTANTS['SITE_URL'] = 'http://josephhader.com' if upload_bool\
-                                  else 'http://zuul.io:8000'
+                                  else 'http://localhost:8000'
     if template_name != "base.html":
         post_content = get_posts(template_name.split(".")[0])
     else:
