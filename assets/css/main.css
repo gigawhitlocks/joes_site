@@ -1,7 +1,7 @@
 html, body {
     /*background-color: #383742;*/
     background-color: #2a2935;
-    color: #8A8A8B;
+    color: #e4e3e7;
     font-family: helvetica;
     height: 100%;
 }
@@ -17,6 +17,15 @@ html, body {
 }
 
 .jumbotron {
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
+    background-color: #2a2935;
+    margin-bottom: 0px;
+}
+
+.jumbotron>*>img {
     padding-bottom: 1em;
     padding-top: 1em;
     padding-left: 4em;
@@ -46,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0;
     margin-right: 0;
     z-index:-1000;
+    overflow: hidden;
 }
 
 #layout {
@@ -55,10 +65,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav {
-    background-color: #383742; 
+    background-color: #383742;
     @grid-float-breakpoint: @screen-md-min;
     position: relative;
-    top: -10px;
+    top: -23px;
 }
 
 .thumbnail {
@@ -74,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .thumbnail>*>img {
     display: @display;
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
 }
 
@@ -92,12 +102,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #footer {
     position: relative;
-    margin-top: -70px; /* negative value of footer height */
-    height: 70px;
+    margin-top: -37px; /* negative value of footer height */
+    height: 37px;
     clear:both;
-    padding-top:20px;
+    padding-top:7px;
     background-color: #1d1d25;
-    color: #2a2935;
+    color: #383741;
 }
 
 #wrap {
@@ -137,4 +147,6 @@ h1, h2, h3, h4, h5, h6 {
 #banner {
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    top: -10px;
 }

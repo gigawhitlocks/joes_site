@@ -1,12 +1,42 @@
 work:
   jumbotron: work/jumbotron.md
   feed:
-  - name: under_armor
-    thumb: images/under_armor.png
-    expanded: work/under_armor.md
   - name: moogfest
-    thumb: images/Moog720Thumb.jpg
+    thumb: images/Moog720Thumb.jpg "WCU @ Moogfest"
     expanded: work/moogfest.md
+
+  - name: edgewater
+    thumb: images/EdgewaterThumb.jpg "Logo Design - Edgewater"
+    expanded: work/edgewater.md
+
+  - name: manitou
+    thumb: images/ManitouThumb.png
+    expanded: work/manitou.md
+
+  - name: summer
+    thumb: images/SummerThumb.jpg
+    expanded: work/summer.md
+
+  - name: landmark
+    thumb: images/LandmarkThumb.jpg    
+    expanded: work/landmark.md
+
+
+  - name: moments to remember
+    thumb: images/MomentsThumb.jpg
+    expanded: work/moments.md
+
+  - name: companyman
+    thumb: images/CompanyManThumb.jpg
+    expanded: work/companyman.md
+
+  - name: triplearts
+    thumb: images/TripleArtsThumb.jpg
+    expanded: work/triplearts.md
+
+  - name: threadcat
+    thumb: images/ThreadCatThumb.jpg
+    expanded: work/threadcat.md
 
 about: about.md
 contact: contact.md

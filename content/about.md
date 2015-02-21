@@ -1,11 +1,10 @@
-Loquendo sedebat; a utrumque cuncta? Filia unus Laomedonta rapit, marmore fallit
-prius? **Amantem tenentem** vulnera crescere felicem praesignia oculos revulsum
-genuum! Gelidos curat. Superatus liquidis nostri, iacentis fama et putat
-sustinui cervixque et dare [ense aliter vacantem](http://imgur.com/) figit atque
-missus, non.
+There’s nothing more uniquely human than the arts.  Regardless of medium, they have the capacity to touch the deepest parts of the human psyche, reveal life truths, and ultimately change people’s lives.  
 
-Minor crescit [rates](http://imgur.com/) Drya propter officiique, in venenis
-ferendam; superi. Tamen volentem, quid nomen et Achaia natarum. Hic nisi
-Pandione pectora illic attactu voveas vidi egisse effuso innumeris bacarum. Hoc
-ait quae futurus functo Eurytion cupidine trunca; est totos Amyclis tamen
-liquebat. Sidera tibique habet res; armaque quacumque.
+Though I work in a commercial environment, I believe the fundamental principles of film, art and music are as applicable to modern commercial work as they are to “fine” art forms.  
+
+My work is purpose driven, in the sense that I aim to draw on these classical, fundamental principles to most 
+effectively deliver the goal of each project.  I see these principles as the key to most intimately connecting the 
+audience, both intellectually and viscerally, with the work.   
+
+I believe “the magic” happens when a collaborative environment is fostered, where ideas can be freely exchanged.  I also place especially great value and rely on the fresh perspectives of those far removed from any creative field. ![Alt text](/images/pixelHexagon.png)  
+

@@ -12,9 +12,9 @@
   <body>
     <div id="wrap">
       <div class="container-fluid clear-top logo">
-	<div class="row" style="text-align: center; padding: 10px;">
+	<div class="row" style="text-align: center; ">
 	  <a href="{{SITE_URL}}">
-	    <img src="{{SITE_URL}}/images/LOGO.png" class="img-responsive" id="banner" />
+	    <img src="{{SITE_URL}}/images/LOGO.png" style="margin-left: auto; margin-right:auto;" class="img-responsive" id="banner" />
 	  </a>
 	</div>
       </div>
@@ -29,23 +29,23 @@
 
       {% block jumbotron %}
       {% endblock jumbotron %}
-      
+
       <div class="container-fluid">
 	<div id="main" style="text-align:center">
 	  <div style="margin-left: auto; margin-right: auto;">
-	    <div id="offset-content-padding" >
+	    <div id="offset-content-padding" style="overflow: hidden">
 	      {% block content %}
 	      {% endblock %}
 	    </div>
 	  </div>
 	</div>
       </div>
-      
+
     </div>
     <div class="container-fluid" id="footer">
       <div class="row">
 	<div class="col-md-12">
-	  <p style="text-align: center">DESIGN BY JOSEPH HADER&nbsp;&nbsp;|&nbsp;&nbsp;</pre>DEVELOPED BY 
+	  <p style="text-align: center">DESIGN BY JOSEPH HADER&nbsp;&nbsp;|&nbsp;&nbsp;</pre>DEVELOPED BY
 	    IAN WHITLOCK&nbsp;&nbsp;|&nbsp;&nbsp;2015</p>
 	</div>
       </div>

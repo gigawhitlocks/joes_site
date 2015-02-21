@@ -11,7 +11,9 @@
   {% for post in post_content.feed %}
   <div class="col-md-4 thumbnail img-responsive">
     <a href="#nav" id="{{post.id}}-link">
-      <img alt="{{post.name}}"src="{{SITE_URL}}/{{post.thumb}}"/></a>
+      <img alt="{{post.name}}"src="{{SITE_URL}}/{{post.thumb}}<p>{{post.caption}}</p>" /></a>
+
+
   </div>
   <script type="text/javascript">
    $("#{{post.id}}-link").click(function(){
