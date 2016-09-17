@@ -20,7 +20,7 @@ extra_templates = {}
 
 JINJA_CONSTANTS = {
     'SITE_URL': None,
-    'NAV_ELEMENTS': ['about', 'work', 'contact']
+    'NAV_ELEMENTS': ['work', 'about', 'contact']
 }
 
 def get_post(post_name):
