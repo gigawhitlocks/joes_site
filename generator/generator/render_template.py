@@ -14,12 +14,15 @@ import uuid
 import yaml
 
 TESTROOT = None
+sitemap = None
+
 extra_templates = {}
 
 JINJA_CONSTANTS = {
     'SITE_URL': None,
     'NAV_ELEMENTS': ['about', 'work', 'contact']
 }
+
 def get_post(post_name):
     try:
         output = markdown.markdown(
@@ -59,9 +62,14 @@ def _translate_posts(pagemap):
             except TypeError:
                 return [ _translate_posts(element) for element in pagemap ]
 
+def get_sitemap():
+    global sitemap
+    if sitemap == None:
+        sitemap = yaml.load_all(open(TESTROOT+"sitemap.yml")).next()
+    return sitemap
+
 def get_posts(page):
-    sitemap = yaml.load_all(open(TESTROOT+"sitemap.yml")).next()
-    return _translate_posts(sitemap[page])
+    return _translate_posts(get_sitemap()[page])
 
 def _render_template(template, **kwargs):
     """foo
@@ -91,15 +99,19 @@ def upload_template(bucket, template_name, rendered_template):
     bucket_template.set_contents_from_string(
         rendered_template, policy='public-read')
 
+def set_testroot(testroot):
+    global TESTROOT
+    TESTROOT = testroot + "/"
+
 def render_template(template_name, upload_bool, testroot):
     """pylint
     """
-    global TESTROOT
-    TESTROOT = testroot + "/"
+    set_testroot(testroot)
     JINJA_CONSTANTS['TEMPLATE_URL'] = template_name.split('.html')[0]
     JINJA_CONSTANTS['SITE_URL'] = 'http://josephhader.com' if upload_bool\
                                   else 'http://localhost:8000'
     if template_name != "base.html":
+        t = template_name.split(".")[0]
         post_content = get_posts(template_name.split(".")[0])
     else:
         post_content = None

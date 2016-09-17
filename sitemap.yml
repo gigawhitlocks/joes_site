@@ -1,42 +1,60 @@
 work:
   jumbotron: work/jumbotron.md
   feed:
-  - name: moogfest
-    thumb: images/Moog720Thumb.jpg "WCU @ Moogfest"
-    expanded: work/moogfest.md
+    - name: make it bounce
+      thumb: images/bounce.jpg
+      expanded: work/bounce.md
+      caption: WCU Drumline Promo &nbsp&nbsp|&nbsp&nbsp "Make It Bounce"
 
-  - name: edgewater
-    thumb: images/EdgewaterThumb.jpg "Logo Design - Edgewater"
-    expanded: work/edgewater.md
+    - name: teach spot
+      thumb: images/teachThumb.jpg
+      expanded: work/teach.md
+      caption: 15 sec Pre-roll &nbsp&nbsp|&nbsp&nbsp MAEd Promo
 
-  - name: manitou
-    thumb: images/ManitouThumb.png
-    expanded: work/manitou.md
+    - name: find it
+      thumb: images/findThumb.jpg
+      expanded: work/find.md
+      caption: 30 sec TV spot &nbsp&nbsp|&nbsp&nbsp "Find It"
 
-  - name: summer
-    thumb: images/SummerThumb.jpg
-    expanded: work/summer.md
+    - name: mountain faith
+      thumb: images/faithThumb.jpg
+      expanded: work/mountainFaith.md
+      caption: Music Video &nbsp&nbsp|&nbsp&nbsp "Carol of the Bells"
 
-  - name: landmark
-    thumb: images/LandmarkThumb.jpg    
-    expanded: work/landmark.md
+    - name: moogfest
+      thumb: images/Moog720Thumb.jpg
+      expanded: work/moogfest.md
+      caption: WCU @ Moogfest
 
+    - name: summer
+      thumb: images/SummerThumb.jpg
+      expanded: work/summer.md
+      caption: Summer @ WCU
 
-  - name: moments to remember
-    thumb: images/MomentsThumb.jpg
-    expanded: work/moments.md
+    - name: companyman
+      thumb: images/CompanyManThumb.jpg
+      expanded: work/companyman.md
+      caption: Poster Design &nbsp&nbsp|&nbsp&nbsp Asheville, NC
 
-  - name: companyman
-    thumb: images/CompanyManThumb.jpg
-    expanded: work/companyman.md
+    - name: mozingo
+      thumb: images/mozingoThumb.jpg
+      expanded: work/mozingo.md
+      caption: Logo Design &nbsp&nbsp|&nbsp&nbsp Mozingo Photography
 
-  - name: triplearts
-    thumb: images/TripleArtsThumb.jpg
-    expanded: work/triplearts.md
+    - name: adventure
+      thumb: images/adventureThumb.jpg
+      expanded: work/adventure.md
+      caption: Creative Direction &nbsp&nbsp|&nbsp&nbsp Environmental Branding
 
-  - name: threadcat
-    thumb: images/ThreadCatThumb.jpg
-    expanded: work/threadcat.md
+    - name: threadcat
+      thumb: images/ThreadCatThumb.jpg
+      expanded: work/threadcat.md
+      caption: Logo Design &nbsp&nbsp|&nbsp&nbsp Threadcat
+
+    - name: foxkite
+      thumb: images/foxkiteThumb.jpg
+      expanded: work/foxkite.md
+      caption: Branding & Logo Design &nbsp&nbsp|&nbsp&nbsp Foxkite
 
 about: about.md
 contact: contact.md

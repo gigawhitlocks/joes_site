@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block jumbotron %}
+<div class="jumbotron">
+  <div class="embed-responsive embed-responsive-16by9" id="jumbotron">
+    {{ post_content.jumbotron }}
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="row center-block">
+  {% for post in post_content.feed %}
+  <div class="col-md-4 thumbnail img-responsive clearfix">
+    <a href="#nav" id="{{post.id}}-link">
+      <img alt="{{post.name}}" src="{{SITE_URL}}/{{post.thumb}}" class="thumb_hover" /></a>
+      </br />
+      <p style="text-align: center">{{post.caption}}</p>
+  </div>
+  <script type="text/javascript">
+   $("#{{post.id}}-link").click(function(){
+       $.get("{{SITE_URL}}/{{post.filename}}.html", function(data){
+	   $("#jumbotron").html(data);
+	   if (!$("#jumbotron").children().is('iframe')) {
+	       $("#jumbotron").removeClass("embed-responsive");
+	       $("#jumbotron").removeClass("embed-responsive-16by9");
+	   } else {
+	       $("#jumbotron").addClass("embed-responsive");
+	       $("#jumbotron").addClass("embed-responsive-16by9");
+	   };
+       });
+   });
+  </script>
+  {% endfor %}
+</div>
+{% endblock %}

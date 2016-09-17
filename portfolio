@@ -1,0 +1,11 @@
+#!/bin/bash
+## export JOE_AWS=token
+## export JOE_AWS_SECRET=aws secret
+
+if [ ! -d "v" ]; then
+    virtualenv v/;
+    cd generator; ../v/bin/pip install -e .; cd ../;
+    v/bin/pip install -r requirements.txt;
+fi;
+
+v/bin/python generator/generator/generate_site.py $(pwd) "$@"

@@ -6,6 +6,14 @@ html, body {
     height: 100%;
 }
 
+
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" 
+      type="image/png" 
+      href="josephhader.com/images/favicon.png">
+</head>
+
+
 .content {
     margin-left: 5px;
     margin-bottom: 50px;
@@ -23,16 +31,11 @@ html, body {
     padding-right: 4em;
     background-color: #2a2935;
     margin-bottom: 0px;
+    text-align: center;
+    color: #383742;
+    line-height: 1.6em;
 }
 
-.jumbotron>*>img {
-    padding-bottom: 1em;
-    padding-top: 1em;
-    padding-left: 4em;
-    padding-right: 4em;
-    background-color: #2a2935;
-    margin-bottom: 0px;
-}
 
 h1, h2, h3, h4, h5, h6 {
     color: #FFFFFF;
@@ -124,8 +127,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact {
-    height: 346px;
-    width: 300px;
+    height: 344px;
+    width: 242px;
     background-image: url(/images/HexagonWatermark.png);
     background-color: #2a2935;
     background-repeat: no-repeat;
@@ -136,17 +139,33 @@ h1, h2, h3, h4, h5, h6 {
 #contact>*>img {
     background: none;
 }
+
 #lunch-wrapper {
-    height: 346px;
+    height: 0px;
     padding: 0;
     position: relative;
     top: 87px;
 }
-
 
 #banner {
     margin-left: auto;
     margin-right: auto;
     position: relative;
     top: -10px;
+}
+
+.thumb_hover {
+    opacity: .9;
+}
+
+.thumb_hover:hover {
+    opacity: 10;
+}
+
+#jumbotron>*>img {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

@@ -5,7 +5,7 @@ from generator import render_template
 
 def main():
 
-    parser = argparse.ArgumentParser(description='Joe\' Custom Site Generator!')
+    parser = argparse.ArgumentParser(description='Joe\'s Custom Site Generator!')
     parser.add_argument('--upload', help='Add --upload after the command to upload the site to s3!', dest='upload',
                         default=False, action='store_true')
     parser.add_argument('project_dir',
@@ -20,8 +20,12 @@ def main():
 
     os.system("rm -rf output/")
     os.system("mkdir -p output/work")
-    os.system("ln -s {}/ouput/work.html {}/output/index.html".format(cwd, cwd))
+    os.system("ln -s {}/output/work.html {}/output/index.html".format(cwd, cwd))
+    render_template.set_testroot(args.project_dir)
+
     for template in os.listdir('templates'):
+        if not render_template.get_sitemap().get(template.split(".")[0], False):
+            continue
         render_template.render_template(template, args.upload, args.project_dir)
 
     for asset in os.listdir('assets'):
@@ -41,7 +45,7 @@ def main():
     SimpleHTTPHandler = SimpleHTTPServer.SimpleHTTPRequestHandler
     httpd = SocketServer.TCPServer(("", PORT), SimpleHTTPHandler)
 
-    print "Serving at http://localhost:{}".format(PORT)
+    print "Navigate to http://localhost:{} in your browser to see a preview of the site".format(PORT)
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

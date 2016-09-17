@@ -1,10 +1,19 @@
-There’s nothing more uniquely human than the arts.  Regardless of medium, they have the capacity to touch the deepest parts of the human psyche, reveal life truths, and ultimately change people’s lives.  
+Joseph Hader is a filmmaker living in the mountains of North Carolina, who specializes in engaging a new generation of audiences that reject traditional advertising and crave authentic connection and experiences.  By keeping the crew and overhead to a minimum, Hader delivers agency-caliber work while keeping an intimate collaborative process and an agile workflow.  The result is strategic marketing content with a distinctly non-commercial feel. ![Alt text](/images/pixelHexagon.png) 
+<p>
+<p>
+![Alt text](/images/testimonials.png) 
+<p>
+<p>
+<p>
+"Organized and diligent, Joseph is a hard-working, creative self-starter who invariably understands exactly what a project is all about from the outset, and more importantly how to execute said vision quickly and effectively."
+<p>
+- Jonathan Cobrda  |  NY,NY  |  RWS & Associates
+<p>
+<p>
+<p>
+<p>
+"The footage exceeded my expectations as well as the producer's expectations and the footage was essential for the segment. Without his talented work, we would not have been able to air the segment."
+<p>
+- Robert Gunter  |  Raleigh, NC  |  PBS  |  UNCTV
 
-Though I work in a commercial environment, I believe the fundamental principles of film, art and music are as applicable to modern commercial work as they are to “fine” art forms.  
-
-My work is purpose driven, in the sense that I aim to draw on these classical, fundamental principles to most 
-effectively deliver the goal of each project.  I see these principles as the key to most intimately connecting the 
-audience, both intellectually and viscerally, with the work.   
-
-I believe “the magic” happens when a collaborative environment is fostered, where ideas can be freely exchanged.  I also place especially great value and rely on the fresh perspectives of those far removed from any creative field. ![Alt text](/images/pixelHexagon.png)  
-
+![Alt text](/images/joseph-worked-with.png)
