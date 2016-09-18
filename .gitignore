@@ -1,6 +1,7 @@
 v/*
 output/*
-content/*
 assets/images*
 *~
 *.pyc
+secrets
+*.DS_Store
