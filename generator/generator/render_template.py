@@ -1,6 +1,7 @@
 """
 """
 from boto.s3.connection import S3Connection
+import boto.s3.connection
 
 from jinja2 import Environment, PackageLoader
 import pyembed.core.parse
@@ -120,7 +121,10 @@ def render_template(template_name, upload_bool, testroot):
                                             post_content=post_content,
                                             **JINJA_CONSTANTS))
     if upload_bool:
-        conn = S3Connection(os.getenv('JOE_AWS'), os.getenv('JOE_AWS_SECRET'))
+        conn = S3Connection(os.getenv('JOE_AWS'),
+                            os.getenv('JOE_AWS_SECRET'),
+                            calling_format=boto.s3.connection.OrdinaryCallingFormat())
+
         bucket = conn.get_bucket('josephhader.com')
         upload_template(bucket, template_name, rendered_page)
 

@@ -1,4 +1,5 @@
 from boto.s3.connection import S3Connection
+import boto.s3.connection
 import os
 import argparse
 from generator import render_template
@@ -18,11 +19,13 @@ def main():
     if not 'sitemap.yml' in os.listdir('.'):
         raise Exception('SANITY CHECK! Aborting due to execution in unknown directory!')
 
+    print "Setting up system.."
     os.system("rm -rf output/")
     os.system("mkdir -p output/work")
     os.system("ln -s {}/output/work.html {}/output/index.html".format(cwd, cwd))
     render_template.set_testroot(args.project_dir)
 
+    print("Rendering templates..")
     for template in os.listdir('templates'):
         if not render_template.get_sitemap().get(template.split(".")[0], False):
             continue
@@ -32,7 +35,8 @@ def main():
         os.system("ln -s {}/assets/{} {}/output/{}".format(cwd, asset, cwd, asset))
 
     if args.upload:
-        conn = S3Connection(os.getenv('JOE_AWS'), os.getenv('JOE_AWS_SECRET'))
+        conn = S3Connection(os.getenv('JOE_AWS'), os.getenv('JOE_AWS_SECRET'),
+                            calling_format=boto.s3.connection.OrdinaryCallingFormat())
         bucket = conn.get_bucket('josephhader.com')
         print("Uploading assets..")
         render_template.upload_assets(bucket)
