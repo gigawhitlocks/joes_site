@@ -1,6 +1,5 @@
 #!/bin/bash
-## export JOE_AWS=token
-## export JOE_AWS_SECRET=aws secret
+source secrets
 
 if [ ! -d "v" ]; then
     virtualenv v/;
