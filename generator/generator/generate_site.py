@@ -42,8 +42,27 @@ def main():
     import SimpleHTTPServer
     import SocketServer
     PORT = 8000
-    SimpleHTTPHandler = SimpleHTTPServer.SimpleHTTPRequestHandler
-    httpd = SocketServer.TCPServer(("", PORT), SimpleHTTPHandler)
+
+    def start_server():
+        import socket
+        try:
+            SimpleHTTPHandler = SimpleHTTPServer.SimpleHTTPRequestHandler
+            httpd = SocketServer.TCPServer(("", PORT), SimpleHTTPHandler)
+            return httpd
+        except socket.error:
+            return False
+
+    import time
+    started = False
+    httpd = None
+    while not started:
+        started = start_server()
+        if not started:
+            for i in range(30,0,-1):
+                print "Socket in use; sleeping {} seconds".format(i)
+                time.sleep(1)
+        else:
+            httpd = started
 
     print "Navigate to http://localhost:{} in your browser to see a preview of the site".format(PORT)
     try:

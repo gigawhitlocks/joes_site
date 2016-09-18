@@ -1,7 +1,7 @@
-Joseph Hader is a filmmaker living in the mountains of North Carolina, who specializes in engaging a new generation of audiences that reject traditional advertising and crave authentic connection and experiences.  By keeping the crew and overhead to a minimum, Hader delivers agency-caliber work while keeping an intimate collaborative process and an agile workflow.  The result is strategic marketing content with a distinctly non-commercial feel. ![Alt text](/images/pixelHexagon.png) 
+Joseph Hader is a filmmaker living in the mountains of North Carolina, who specializes in engaging a new generation of audiences that reject traditional advertising and crave authentic connection and experiences.  By keeping the crew and overhead to a minimum, Hader delivers agency-caliber work while keeping an intimate collaborative process and an agile workflow.  The result is strategic marketing content with a distinctly non-commercial feel. ![End of text decoration](/images/pixelHexagon.png) 
 <p>
 <p>
-![Alt text](/images/testimonials.png) 
+![Testimonials](/images/testimonials.png) 
 <p>
 <p>
 <p>
@@ -15,5 +15,5 @@ Joseph Hader is a filmmaker living in the mountains of North Carolina, who speci
 "The footage exceeded my expectations as well as the producer's expectations and the footage was essential for the segment. Without his talented work, we would not have been able to air the segment."
 <p>
 - Robert Gunter  |  Raleigh, NC  |  PBS  |  UNCTV
-
-![Alt text](/images/joseph-worked-with.png)
+<p>
+<img src="/images/joseph-worked-with.png" id="worked-with" />

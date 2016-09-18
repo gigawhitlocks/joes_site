@@ -166,3 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 #lunch-wrapper>img {
     width: 260px;
 }
+
+#worked-with {
+    width: 100%;
+}
