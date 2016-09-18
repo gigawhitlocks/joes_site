@@ -1,7 +1,7 @@
 v/*
 output/*
-assets/images*
 *~
 *.pyc
 secrets
 *.DS_Store
+generator/generator.egg-info
